@@ -1,6 +1,7 @@
 import { Container, Card} from "react-bootstrap";
 
 export default function FirstHomeComponent() {
+  // This part will contain some info about products
   return (
     <Container className="my-5">
       <h2>Lorem ipsum dolor sit ame</h2>
@@ -70,3 +71,5 @@ export default function FirstHomeComponent() {
     </Container>
   );
 }
+
+

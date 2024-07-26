@@ -1,6 +1,7 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { data } from "../api/api";
+import { Button, Container } from "react-bootstrap";
 export default function CarouselPage() {
   const responsive = {
     desktop: {
@@ -20,28 +21,31 @@ export default function CarouselPage() {
     },
   };
   return (
-    <Carousel
-      swipeable={false}
-      draggable={false}
-      showDots={true}
-      responsive={responsive}
-      ssr={true}
-      infinite={true}
-      autoPlaySpeed={1000}
-      keyBoardControl={true}
-      containerClass="carousel-container"
-      customTransition="all 1s ease-in-out"
-      transitionDuration={1000}
-      removeArrowOnDeviceType={["tablet", "mobile"]}
-      dotListClass="custom-dot-list-style"
-      itemClass="carousel-item-padding-40-px"
-    >
-      {data.map((data) => (
-        <div key={data._id}>
-          <h2>{data.name}</h2>
-          <img src={data.image} style={{width:"300px"}}/>
-        </div>
-      ))}
-    </Carousel>
+    <Container>
+      <Carousel
+        swipeable={false}
+        draggable={false}
+        showDots={true}
+        responsive={responsive}
+        ssr={true}
+        infinite={true}
+        autoPlaySpeed={1000}
+        keyBoardControl={true}
+        containerClass="carousel-container"
+        customTransition="all 1s ease-in-out"
+        transitionDuration={1000}
+        removeArrowOnDeviceType={["tablet", "mobile"]}
+        dotListClass="custom-dot-list-style"
+        itemClass="carousel-item-padding-40-px"
+      >
+        {data.map((data) => (
+          <div key={data._id}>
+            <h2>{data.name}</h2>
+            <img src={data.image} style={{ width: "300px" }} />
+          </div>
+        ))}
+      </Carousel>
+      <Button variant="danger">Order now!</Button>
+    </Container>
   );
 }

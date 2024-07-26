@@ -1,6 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
-
+import bgImg from "../../assests/bgImg.jpg";
 export default function Story() {
+  // This will be story/ about 
   return (
     <Container className="d-flex flex-wrap">
       <Row>
@@ -19,18 +20,38 @@ export default function Story() {
           <Container>
             <Row>
               <Col xs={6} className="p-1">
-                <img src="image1.jpg" alt="Image 1" className="img-fluid" />
+                <img
+                  src={bgImg}
+                  alt="Image 1"
+                  className="img-fluid"
+                  style={{ width: "200px" }}
+                />
               </Col>
               <Col xs={6} className="p-1">
-                <img src="image2.jpg" alt="Image 2" className="img-fluid" />
+                <img
+                  src={bgImg}
+                  alt="Image 2"
+                  className="img-fluid"
+                  style={{ width: "200px" }}
+                />
               </Col>
             </Row>
             <Row>
               <Col xs={6} className="p-1">
-                <img src="image3.jpg" alt="Image 3" className="img-fluid" />
+                <img
+                  src={bgImg}
+                  alt="Image 3"
+                  className="img-fluid"
+                  style={{ width: "200px" }}
+                />
               </Col>
               <Col xs={6} className="p-1">
-                <img src="image4.jpg" alt="Image 4" className="img-fluid" />
+                <img
+                  src={bgImg}
+                  alt="Image 4"
+                  className="img-fluid"
+                  style={{ width: "200px" }}
+                />
               </Col>
             </Row>
           </Container>
