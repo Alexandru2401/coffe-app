@@ -1,20 +1,21 @@
+import { Container, Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
     <footer
       className="d-flex justify-content-around py-3"
-      style={{ borderTop: "2px solid red" }}
+      style={{ borderTop: "2px solid #6F4E37", backgroundColor:"#ECB176" }}
     >
-      <div className="col-one">
+      <Row>
         <h2>Contact Details:</h2>
         <ul>
           <li>123 Street, City, Country</li>
           <li>123-456-789</li>
           <li>info@eCommerce.com</li>
         </ul>
-      </div>
-      <div className="col-two">
+      </Row>
+      <Row>
         <h2>Sponsors:</h2>
         <ul>
           <li>ShopOne</li>
@@ -23,8 +24,8 @@ export default function Footer() {
           <li>ClothesWorld</li>
           <li>Shop$Go</li>
         </ul>
-      </div>
-      <div className="social-media">
+      </Row>
+      <Row>
         <h2>Follow us on:</h2>
         <ul style={{ listStyle: "none" }}>
           <Link
@@ -49,7 +50,7 @@ export default function Footer() {
             <li style={{ color: "#151515" }}>X (Twitter)</li>
           </Link>
         </ul>
-      </div>
+      </Row>
     </footer>
   );
 }

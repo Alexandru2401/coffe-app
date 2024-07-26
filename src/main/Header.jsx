@@ -1,9 +1,10 @@
 import NavbarComponent from "./Navbar";
 import { Button, Card, Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
 export default function Header() {
   return (
     <div
-      style={{ backgroundColor: "red", height: "50vh"}}
+      style={{ backgroundColor: "#ECB176", height: "50vh"}}
     >
       <NavbarComponent />
       <Container className="d-flex align-items-center justify-content-center h-100">
@@ -17,7 +18,7 @@ export default function Header() {
             <Card.Text>
               It' s not about cofee, it's about love!
             </Card.Text>
-            <Card.Link href="#"><Button variant="info">Card Link</Button></Card.Link>
+            <Link to="/products"><Button variant="info">See products</Button></Link>
           </Card.Body>
         </Card>
       </Container>

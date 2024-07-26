@@ -2,7 +2,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import bgImg from "../../assests/bgImg.jpg"
 export default function ThirdHomeComponent() {
   return (
-    <Container>
+    <Container style={{backgroundColor:"#ECB176", borderRadius:"5px"}}>
         <h3>Everithing you need!</h3>
       <Row>
         <Col>

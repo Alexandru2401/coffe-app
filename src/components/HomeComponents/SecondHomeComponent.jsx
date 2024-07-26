@@ -3,7 +3,7 @@ import CarouselFadeExample from "./BotCarousel";
 
 export default function SecondHomeComponents() {
   return (
-    <Container className="my-4">
+    <Container className="my-4" style={{backgroundColor:"#ECB176", borderRadius:"5px"}}>
       <h2>Lorem ipsum</h2>
       <Container className="my-5">
         <Row>
@@ -14,7 +14,7 @@ export default function SecondHomeComponents() {
           </Col>
           <Col md={6}>
             <div style={{ maxWidth: "600px" }}>
-              <Card className="mb-3">
+              <Card className="mb-3" style={{backgroundColor:"#FED8B1"}}>
                 <Card.Header as="h5">Featured</Card.Header>
                 <Card.Body>
                   <Card.Title>Special title treatment</Card.Title>
@@ -25,7 +25,7 @@ export default function SecondHomeComponents() {
                   <Button variant="primary">Go somewhere</Button>
                 </Card.Body>
               </Card>
-              <Card className="mb-3">
+              <Card className="mb-3" style={{backgroundColor:"#FED8B1"}}>
                 <Card.Header as="h5">Featured</Card.Header>
                 <Card.Body>
                   <Card.Title>Special title treatment</Card.Title>
@@ -36,7 +36,7 @@ export default function SecondHomeComponents() {
                   <Button variant="primary">Go somewhere</Button>
                 </Card.Body>
               </Card>
-              <Card className="mb-3">
+              <Card className="mb-3" style={{backgroundColor:"#FED8B1"}}>
                 <Card.Header as="h5">Featured</Card.Header>
                 <Card.Body>
                   <Card.Title>Special title treatment</Card.Title>

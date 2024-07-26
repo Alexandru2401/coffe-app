@@ -1,5 +1,23 @@
-export default function Products(){
-    return(
-        <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, corporis ipsam! Voluptatibus cumque officia laborum minima consectetur blanditiis, voluptate debitis, ducimus libero aut aspernatur doloremque voluptatem autem, nobis quos! Laboriosam!</div>
-    )
+import { Container, Row, Col } from "react-bootstrap";
+import { data } from "../api/api";
+import ProductCard from "../components/ProductCard";
+export default function Products() {
+  return (
+    <Container>
+      <Row>
+        {data.map((data) => {
+          return (
+            <Col>
+              <ProductCard
+                key={data._id}
+                name={data.name}
+                image={data.image}
+                description={data.description}
+              />
+            </Col>
+          );
+        })}
+      </Row>
+    </Container>
+  );
 }
