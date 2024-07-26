@@ -1,8 +1,11 @@
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="d-flex justify-content-around py-3">
+    <footer
+      className="d-flex justify-content-around py-3"
+      style={{ borderTop: "2px solid red" }}
+    >
       <div className="col-one">
         <h2>Contact Details:</h2>
         <ul>
@@ -24,27 +27,27 @@ export default function Footer() {
       <div className="social-media">
         <h2>Follow us on:</h2>
         <ul style={{ listStyle: "none" }}>
-          {/* <Link
+          <Link
             to="https://www.instagram.com/"
             target="_blank"
             style={{ textDecoration: "none" }}
-          > */}
-          <li style={{ color: "#151515" }}>Instragram</li>
-          {/* </Link>
+          >
+            <li style={{ color: "#151515" }}>Instragram</li>
+          </Link>
           <Link
             to="https://www.facebook.com/"
             target="_blank"
             style={{ textDecoration: "none" }}
-          > */}
-          <li style={{ color: "#151515" }}>Facebook</li>
-          {/* </Link>
-          <Link 
+          >
+            <li style={{ color: "#151515" }}>Facebook</li>
+          </Link>
+          <Link
             to="https://x.com/i/flow/login"
             target="_blank"
             style={{ textDecoration: "none" }}
-          > */}
-          <li style={{ color: "#151515" }}>X (Twitter)</li>
-          {/* </Link> */}
+          >
+            <li style={{ color: "#151515" }}>X (Twitter)</li>
+          </Link>
         </ul>
       </div>
     </footer>

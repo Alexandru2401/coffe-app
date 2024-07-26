@@ -1,6 +1,6 @@
 import { data } from "./api/api";
 
-export default function Products() {
+export default function Productsss() {
   return (
     <div>
       {data.map((data) => {
