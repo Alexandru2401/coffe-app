@@ -3,8 +3,8 @@ import bgImg from "../../assests/bgImg.jpg";
 
 function CarouselFadeExample() {
   return (
-    <Carousel fade style={{ maxHeight: "600px" }}>
-      <Carousel.Item interval={2000} style={{ width: "300px" }}>
+    <Carousel fade style={{ maxHeight: "600px" }} className="mb-4">
+      <Carousel.Item interval={2000} style={{ width: "600px" }}>
         <img
           src={bgImg}
           alt="First slide"
@@ -16,7 +16,7 @@ function CarouselFadeExample() {
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item interval={2000} style={{ width: "300px" }}>
+      <Carousel.Item interval={2000} style={{ width: "600px" }}>
         <img
           src={bgImg}
           alt="Second slide"
@@ -28,7 +28,7 @@ function CarouselFadeExample() {
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item interval={2000} style={{ width: "300px" }}>
+      <Carousel.Item interval={2000} style={{ width: "600px" }}>
         <img
           src={bgImg}
           alt="Third slide"
