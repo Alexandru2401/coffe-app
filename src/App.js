@@ -1,8 +1,9 @@
 import "./App.css";
-import Products from "./Products";
+import Header from "./main/Header";
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
-  return <div className="App"><Products/></div>;
+  return <div className="App"><Header/></div>;
 }
 
 export default App;
