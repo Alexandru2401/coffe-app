@@ -3,7 +3,7 @@ import "react-multi-carousel/lib/styles.css";
 import { data } from "../api/api";
 import { Button, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
-export default function CarouselPage() {
+export default function CarouselProducts() {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -22,7 +22,11 @@ export default function CarouselPage() {
     },
   };
   return (
-    <Container className="my-4 py-4" style={{backgroundColor:"#ECB176", borderRadius:"5px"}}>
+    <Container
+      className="my-4 py-4"
+      style={{ backgroundColor: "#ECB176", borderRadius: "5px" }}
+    >
+      <h2>Chose between multiple choises!</h2>
       <Carousel
         swipeable={false}
         draggable={false}
@@ -39,14 +43,16 @@ export default function CarouselPage() {
         dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-40-px"
       >
-        {data.slice(0,15).map((data) => (
+        {data.slice(0, 15).map((data) => (
           <div key={data._id}>
-            <h2 style={{fontSize:"20px"}}>{data.name}</h2>
+            <h2 style={{ fontSize: "20px" }}>{data.name}</h2>
             <img src={data.image} style={{ width: "300px" }} />
           </div>
         ))}
       </Carousel>
-      <Link to="/products"><Button variant="danger">Order now!</Button></Link>
+      <Link to="/products">
+        <Button variant="danger">Order now!</Button>
+      </Link>
     </Container>
   );
 }

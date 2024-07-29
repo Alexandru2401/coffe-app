@@ -4,6 +4,9 @@ import ProductCard from "../components/ProductCard";
 import { useState } from "react";
 export default function Products() {
   const [querry, setQuery] = useState("");
+  const filteredData = data.filter((data) =>
+    data.name.toLocaleLowerCase().includes(querry)
+  );
   return (
     <Container>
       <Row>
@@ -19,9 +22,15 @@ export default function Products() {
         </Col>
       </Row>
       <Row>
-        {data
-          .filter((data) => data.name.toLocaleLowerCase().includes(querry))
-          .map((data) => (
+        {filteredData.length === 0 ? (
+          <Col>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat ad
+            nam doloremque! Odit autem eligendi reiciendis sed soluta ducimus
+            laborum laudantium nemo in et? Eius, nihil animi! Dolore, vitae
+            quas.
+          </Col>
+        ) : (
+          filteredData.map((data) => (
             <Col className="my-2">
               <ProductCard
                 key={data._id}
@@ -30,7 +39,8 @@ export default function Products() {
                 description={data.description}
               />
             </Col>
-          ))}
+          ))
+        )}
       </Row>
     </Container>
   );

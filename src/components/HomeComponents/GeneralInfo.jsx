@@ -1,10 +1,10 @@
 import { Container, Card} from "react-bootstrap";
 
-export default function FirstHomeComponent() {
+export default function GeneralInfo() {
   // This part will contain some info about products
   return (
     <Container className="my-5">
-      <h2>Lorem ipsum dolor sit ame</h2>
+      <h2>General Info</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde saepe nemo
         ad perferendis ipsam et cum est, soluta deleniti tempore! Laboriosam,
