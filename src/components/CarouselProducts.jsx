@@ -1,7 +1,7 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { data } from "../api/api";
-import { Button, Container } from "react-bootstrap";
+import { Button, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 export default function CarouselProducts() {
   const responsive = {
@@ -23,36 +23,43 @@ export default function CarouselProducts() {
   };
   return (
     <Container
-      className="my-4 py-4"
+      className="my-4 py-4 d-flex align-items-center justify-content-center flex-column"
       style={{ backgroundColor: "#ECB176", borderRadius: "5px" }}
     >
-      <h2>Chose between multiple choises!</h2>
-      <Carousel
-        swipeable={false}
-        draggable={false}
-        showDots={true}
-        responsive={responsive}
-        ssr={true}
-        infinite={true}
-        autoPlaySpeed={1000}
-        keyBoardControl={true}
-        containerClass="carousel-container"
-        customTransition="all 1s ease-in-out"
-        transitionDuration={1000}
-        removeArrowOnDeviceType={["tablet", "mobile"]}
-        dotListClass="custom-dot-list-style"
-        itemClass="carousel-item-padding-40-px"
-      >
-        {data.slice(0, 15).map((data) => (
-          <div key={data._id}>
-            <h2 style={{ fontSize: "20px" }}>{data.name}</h2>
-            <img src={data.image} style={{ width: "300px" }} />
-          </div>
-        ))}
-      </Carousel>
-      <Link to="/products">
-        <Button variant="danger">Order now!</Button>
-      </Link>
+      <Row className="my-3">
+        <h2>Choose from a wide variety of products</h2>
+      </Row>
+
+      <Row className="mb-4 w-100 my-3">
+        <Carousel
+          swipeable={false}
+          draggable={false}
+          showDots={true}
+          responsive={responsive}
+          ssr={true}
+          infinite={true}
+          autoPlaySpeed={1000}
+          keyBoardControl={true}
+          containerClass="carousel-container"
+          customTransition="all 1s ease-in-out"
+          transitionDuration={1000}
+          removeArrowOnDeviceType={["tablet", "mobile"]}
+          dotListClass="custom-dot-list-style"
+          itemClass="carousel-item-padding-40-px"
+        >
+          {data.slice(0, 15).map((data) => (
+            <div key={data._id}>
+              <h2 style={{ fontSize: "20px" }}>{data.name}</h2>
+              <img src={data.image} style={{ width: "300px" }} />
+            </div>
+          ))}
+        </Carousel>
+      </Row>
+      <Row className="my-3">
+        <Link to="/products">
+          <Button variant="danger">Order now!</Button>
+        </Link>
+      </Row>
     </Container>
   );
 }

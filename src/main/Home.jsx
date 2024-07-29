@@ -1,5 +1,6 @@
 import CarouselProducts from "../components/CarouselProducts";
-import BestProduct from "../components/HomeComponents/BestProduct";
+
+import BestProducts from "../components/HomeComponents/BestProducts";
 import GeneralInfo from "../components/HomeComponents/GeneralInfo";
 import ProductsVariety from "../components/HomeComponents/ProductsVariety";
 import Story from "../components/HomeComponents/Story";
@@ -8,14 +9,14 @@ import ThirdHomeComponent from "../components/HomeComponents/ThirdHomeComponents
 
 export default function Home() {
   return (
-    <div>
+    <main style={{backgroundColor:"#FFF2E1"}}>
       <Story />
       <CarouselProducts />
       <GeneralInfo />
       <ProductsVariety />
       <Testimonials />
       <ThirdHomeComponent />
-      <BestProduct />
-    </div>
+      <BestProducts />
+    </main>
   );
 }
