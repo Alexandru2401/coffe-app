@@ -11,10 +11,11 @@ export default function ProductCard(props) {
   const { name, image, description, id } = props;
   const { dispatch } = useContext(FavoriteContext);
   const [showNotification, setNotification] = useState(false);
-
+  const [isFavorited, setFavorited] = useState(false);
   function handleAddToFavorite(product) {
     const favoriteAction = addToFavorites(product);
     dispatch(favoriteAction);
+    setFavorited(true);
     setNotification(true);
     setTimeout(() => {
       setNotification(false);
@@ -34,6 +35,7 @@ export default function ProductCard(props) {
         </Link>
 
         <FavoriteIcon
+          style={{ color: isFavorited ? "red" : "inherit", cursor: "pointer" }}
           onClick={() => {
             handleAddToFavorite({
               id: id,

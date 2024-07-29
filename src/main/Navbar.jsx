@@ -1,4 +1,3 @@
-
 import Container from "react-bootstrap/Container";
 
 import Nav from "react-bootstrap/Nav";
@@ -7,7 +6,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link } from "react-router-dom";
 export default function NavbarComponent() {
   return (
-    <Navbar expand="lg" style={{backgroundColor:"#ECB176"}}>
+    <Navbar expand="lg" style={{ backgroundColor: "#ECB176" }}>
       <Container>
         <Navbar.Brand href="#">Logo</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
@@ -31,8 +30,8 @@ export default function NavbarComponent() {
                 Favourites
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#" disabled>
-              Link
+            <Nav.Link as={Link} to="https://glovoapp.com" target="_blank">
+              Order now!
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
