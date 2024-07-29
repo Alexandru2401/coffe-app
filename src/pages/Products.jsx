@@ -2,6 +2,7 @@ import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { data } from "../api/api";
 import ProductCard from "../components/ProductCard";
 import { useState } from "react";
+import NotFound from "./NotFoundPage";
 export default function Products() {
   const [querry, setQuery] = useState("");
   const filteredData = data.filter((data) =>
@@ -24,14 +25,11 @@ export default function Products() {
       <Row>
         {filteredData.length === 0 ? (
           <Col>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat ad
-            nam doloremque! Odit autem eligendi reiciendis sed soluta ducimus
-            laborum laudantium nemo in et? Eius, nihil animi! Dolore, vitae
-            quas.
+            <NotFound />
           </Col>
         ) : (
           filteredData.map((data) => (
-            <Col className="my-2"  key={data._id}>
+            <Col className="my-2" key={data._id}>
               <ProductCard
                 id={data._id}
                 name={data.name}

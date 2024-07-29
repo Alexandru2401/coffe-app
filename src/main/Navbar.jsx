@@ -1,6 +1,6 @@
-import Button from "react-bootstrap/Button";
+
 import Container from "react-bootstrap/Container";
-import Form from "react-bootstrap/Form";
+
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
@@ -27,8 +27,8 @@ export default function NavbarComponent() {
               <NavDropdown.Item as={Link} to="/products">
                 Products
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/ingredients">
-                Ingredients
+              <NavDropdown.Item as={Link} to="/favourites">
+                Favourites
               </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="#" disabled>

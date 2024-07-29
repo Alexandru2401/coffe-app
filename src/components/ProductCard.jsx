@@ -2,9 +2,9 @@ import { Container } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
-import { useParams } from "react-router-dom";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 export default function ProductCard(props) {
-  const { name, image, description, id} = props;
+  const { name, image, description, id } = props;
   return (
     <Card style={{ width: "18rem", minHeight: "500px", overflow: "hidden" }}>
       <Card.Img variant="top" src={image} />
@@ -16,6 +16,9 @@ export default function ProductCard(props) {
         </Link>
         <Link className="mx-2" to="https://glovoapp.com" target="_blank">
           <Button variant="dark">Order now</Button>
+        </Link>
+        <Link to="/faovurites">
+          <FavoriteIcon />
         </Link>
       </Card.Body>
     </Card>
