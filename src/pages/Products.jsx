@@ -31,9 +31,9 @@ export default function Products() {
           </Col>
         ) : (
           filteredData.map((data) => (
-            <Col className="my-2">
+            <Col className="my-2"  key={data._id}>
               <ProductCard
-                key={data._id}
+                id={data._id}
                 name={data.name}
                 image={data.image}
                 description={data.description}

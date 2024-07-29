@@ -13,12 +13,17 @@ export default function Story() {
           <h2>Our story</h2>
           <p>
             Our story began 10 years ago, when we decided to add a little extra
-            flavor to every cup of coffee. Since then we have been working hard
-            to have the best products on the market. We don't say it, our
-            customers say it. Each product is unique, contains no allergens and
-            suits any taste, any day, any time. Whether you want to enjoy your
-            coffee, which energizes you throughout the day, or you want to cool
-            down on a hot summer day with a frappe, Coffee is at your service.
+            flavor to every cup of coffee.{" "}
+          </p>
+          <p>
+            Since then we have been working hard to have the best products on
+            the market. We don't say it, our customers say it.
+          </p>
+          <p>
+            Each product is unique, contains no allergens and suits any taste,
+            any day, any time. Whether you want to enjoy your coffee, which
+            energizes you throughout the day, or you want to cool down on a hot
+            summer day with a frappe, Coffee is at your service.
           </p>
         </Col>
         <Col md={6}>

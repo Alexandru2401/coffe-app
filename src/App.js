@@ -12,6 +12,7 @@ import {
 import Contact from "./pages/Contact";
 import Products from "./pages/Products";
 import Ingredients from "./pages/Ingredients";
+import Details from "./components/Details";
 function App() {
   return (
     <Router>
@@ -22,6 +23,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/products" element={<Products />} />
           <Route path="/ingredients" element={<Ingredients />} />
+          <Route path="/details/:id" element={<Details />} />
         </Routes>
         <Footer />
       </div>

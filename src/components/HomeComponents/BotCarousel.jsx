@@ -1,45 +1,43 @@
 import Carousel from "react-bootstrap/Carousel";
 import bgImg from "../../assests/bgImg.jpg";
-
+import { data } from "../../api/api";
 function CarouselFadeExample() {
   return (
     <Carousel fade style={{ maxHeight: "600px" }} className="mb-4">
-      <Carousel.Item interval={2000} style={{ width: "600px" }}>
+      <Carousel.Item interval={3000} style={{ width: "600px" }}>
         <img
-          src={bgImg}
+          src={data[0].image}
           alt="First slide"
           className="d-block w-100"
           style={{ maxHeight: "600px" }}
         />
         <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h3>Hot Beverages</h3>
+          <p>Perfect for early mornings!</p>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item interval={2000} style={{ width: "600px" }}>
+      <Carousel.Item interval={3000} style={{ width: "600px" }}>
         <img
-          src={bgImg}
+          src={data[10].image}
           alt="Second slide"
           className="d-block w-100"
           style={{ maxHeight: "600px" }}
         />
         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h3>Iced beverages</h3>
+          <p>Refresh yourself with the coldest drinks!</p>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item interval={2000} style={{ width: "600px" }}>
+      <Carousel.Item interval={3000} style={{ width: "600px" }}>
         <img
-          src={bgImg}
+          src={data[22].image}
           alt="Third slide"
           className="d-block w-100"
           style={{ maxHeight: "600px" }}
         />
         <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
+          <h3>Syrups</h3>
+          <p>The best syrup combined with the best coffee!</p>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

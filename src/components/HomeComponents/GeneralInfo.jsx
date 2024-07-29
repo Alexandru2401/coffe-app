@@ -18,7 +18,10 @@ export default function GeneralInfo() {
 
       <Row className="w-100 d-flex justify-content-center">
         <Col xs={12} md={6} lg={3}>
-          <Card style={{ width: "18rem" }}>
+          <Card
+            style={{ width: "19rem", backgroundColor: "#ECB176" }}
+            className="mb-2"
+          >
             <Card.Body>
               <Card.Title>No chemical</Card.Title>
               <Card.Subtitle className="mb-2 text-muted">
@@ -42,7 +45,10 @@ export default function GeneralInfo() {
         </Col>
 
         <Col xs={12} md={6} lg={3}>
-          <Card style={{ width: "18rem" }}>
+          <Card
+            style={{ width: "19rem", backgroundColor: "#ECB176" }}
+            className="mb-2"
+          >
             <Card.Body>
               <Card.Title>No Preservatives</Card.Title>
               <Card.Subtitle className="mb-2 text-muted">
@@ -66,7 +72,10 @@ export default function GeneralInfo() {
         </Col>
 
         <Col xs={12} md={6} lg={3}>
-          <Card style={{ width: "18rem" }}>
+          <Card
+            style={{ width: "19rem", backgroundColor: "#ECB176" }}
+            className="mb-2"
+          >
             <Card.Body>
               <Card.Title>No Additives</Card.Title>
               <Card.Subtitle className="mb-2 text-muted">
@@ -90,7 +99,10 @@ export default function GeneralInfo() {
         </Col>
 
         <Col xs={12} md={6} lg={3}>
-          <Card style={{ width: "18rem" }}>
+          <Card
+            style={{ width: "19rem", backgroundColor: "#ECB176" }}
+            className="mb-2"
+          >
             <Card.Body>
               <Card.Title>Just Coffee</Card.Title>
               <Card.Subtitle className="mb-2 text-muted">

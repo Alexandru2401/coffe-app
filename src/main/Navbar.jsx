@@ -7,8 +7,8 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link } from "react-router-dom";
 export default function NavbarComponent() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
-      <Container fluid>
+    <Navbar expand="lg" style={{backgroundColor:"#ECB176"}}>
+      <Container>
         <Navbar.Brand href="#">Logo</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
@@ -17,11 +17,19 @@ export default function NavbarComponent() {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link as={Link} to="/">Home</Nav.Link>
-            <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
+            <Nav.Link as={Link} to="/">
+              Home
+            </Nav.Link>
+            <Nav.Link as={Link} to="/contact">
+              Contact
+            </Nav.Link>
             <NavDropdown title="Pages" id="navbarScrollingDropdown">
-              <NavDropdown.Item as={Link} to="/products">Products</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/ingredients">Ingredients</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/products">
+                Products
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/ingredients">
+                Ingredients
+              </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="#" disabled>
               Link
