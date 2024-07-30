@@ -32,13 +32,14 @@ export default function CarouselProducts() {
 
       <Row className="mb-4 w-100 my-3">
         <Carousel
-          swipeable={false}
-          draggable={false}
-          showDots={true}
+          swipeable={true}
+          draggable={true}
+          showDots={false}
           responsive={responsive}
           ssr={true}
-          infinite={true}
-          autoPlaySpeed={1000}
+          autoPlay={false}
+          infinite={false}
+          autoPlaySpeed={2500}
           keyBoardControl={true}
           containerClass="carousel-container"
           customTransition="all 1s ease-in-out"
@@ -46,12 +47,17 @@ export default function CarouselProducts() {
           removeArrowOnDeviceType={["tablet", "mobile"]}
           dotListClass="custom-dot-list-style"
           itemClass="carousel-item-padding-40-px"
+          partialVisbile={false}
         >
-          {data.slice(0, 15).map((data) => (
-            <div key={data._id}>
-              <h2 style={{ fontSize: "20px" }}>{data.name}</h2>
-              <img src={data.image} style={{ width: "300px" }} />
-            </div>
+          {data.slice(5, 25).map((data) => (
+            <Link to="/products" className="product-link">
+              <div key={data._id} className="product-container">
+                <h2 style={{ fontSize: "20px", color: "#6F4E37" }}>
+                  {data.name}
+                </h2>
+                <img src={data.image} style={{ width: "300px" }} />
+              </div>
+            </Link>
           ))}
         </Carousel>
       </Row>

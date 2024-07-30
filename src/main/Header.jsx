@@ -17,11 +17,12 @@ export default function Header() {
         {" "}
         <Card
           style={{
-            width: "20rem",
+            width: "22rem",
+            height: "12rem",
             backgroundColor: "transparent",
             backdropFilter: "blur(6px)",
             fontWeight: "bold",
-            color:"#000"
+            color: "#000",
           }}
         >
           <Card.Body>

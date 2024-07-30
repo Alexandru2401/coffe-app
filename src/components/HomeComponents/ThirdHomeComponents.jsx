@@ -3,10 +3,16 @@ import img from "../../assests/img.png";
 export default function ThirdHomeComponent() {
   return (
     <Container style={{ backgroundColor: "#ECB176", borderRadius: "5px" }}>
-      <h3 className="py-2">Everithing you need!</h3>
       <Row className="my-3">
-        <Col>
-          <h2>Intense Flavour!</h2>
+        <Col className="d-flex flex-column align-items-center">
+          <h2 className="my-4" style={{ borderBottom: "2px solid #000000" }}>
+            Everithing you need!
+          </h2>
+        </Col>
+      </Row>
+      <Row className="m-3">
+        <Col className="d-flex flex-column align-items-center col-component">
+          <h3>Intense Flavour!</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis,
             repudiandae autem minus natus molestias maiores blanditiis debitis
@@ -15,9 +21,9 @@ export default function ThirdHomeComponent() {
           </p>
         </Col>
       </Row>
-      <Row className="my-3">
-        <Col xs={12} lg={4}>
-          <h2>The Best Taste!</h2>
+      <Row className="m-3">
+        <Col xs={12} lg={4} className="col-component">
+          <h3>The Best Taste!</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis,
             repudiandae autem minus natus molestias maiores blanditiis debitis
@@ -25,7 +31,7 @@ export default function ThirdHomeComponent() {
             impedit architecto, explicabo alias!
           </p>
         </Col>
-        <Col xs={12} lg={4}>
+        <Col xs={12} lg={4} className="col-component">
           <img
             src={img}
             style={{
@@ -36,8 +42,8 @@ export default function ThirdHomeComponent() {
             }}
           />
         </Col>
-        <Col xs={12} lg={4}>
-          <h2>100% Coffee!</h2>
+        <Col xs={12} lg={4} className="col-component">
+          <h3>100% Coffee!</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis,
             repudiandae autem minus natus molestias maiores blanditiis debitis
@@ -46,9 +52,9 @@ export default function ThirdHomeComponent() {
           </p>
         </Col>
       </Row>
-      <Row className="my-3">
-        <Col xs={12} lg={6}>
-          <h2>Crazy Combinations!</h2>
+      <Row className="m-3 pb-3">
+        <Col xs={12} lg={6} className="col-component">
+          <h3>Crazy Combinations!</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis,
             repudiandae autem minus natus molestias maiores blanditiis debitis
@@ -56,8 +62,8 @@ export default function ThirdHomeComponent() {
             impedit architecto, explicabo alias!
           </p>
         </Col>
-        <Col xs={12} lg={6}>
-          <h2>Just For You!</h2>
+        <Col xs={12} lg={6} className="col-component">
+          <h3>Just For You!</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis,
             repudiandae autem minus natus molestias maiores blanditiis debitis

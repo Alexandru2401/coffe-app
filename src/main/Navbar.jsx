@@ -16,21 +16,21 @@ export default function NavbarComponent() {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link as={Link} to="/">
+            <Nav.Link as={Link} to="/" className="fw-bold fs-5">
               Home
             </Nav.Link>
-            <Nav.Link as={Link} to="/contact">
+            <Nav.Link as={Link} to="/contact" className="fw-bold fs-5">
               Contact
             </Nav.Link>
-            <NavDropdown title="Pages" id="navbarScrollingDropdown">
-              <NavDropdown.Item as={Link} to="/products">
+            <NavDropdown title="Pages" id="navbarScrollingDropdown" className="fw-bold fs-5">
+              <NavDropdown.Item as={Link} to="/products" className="fw-bold fs-5">
                 Products
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/favourites">
+              <NavDropdown.Item as={Link} to="/favourites" className="fw-bold fs-5">
                 Favourites
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link as={Link} to="https://glovoapp.com" target="_blank">
+            <Nav.Link as={Link} to="https://glovoapp.com" target="_blank" className="fw-bold fs-5">
               Order now!
             </Nav.Link>
           </Nav>

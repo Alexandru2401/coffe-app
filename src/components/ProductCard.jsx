@@ -46,7 +46,7 @@ export default function ProductCard(props) {
         />
         {showNotification && (
           <div className="property-notification">
-            Property was added to favourite!
+            Product was added to favourite!
           </div>
         )}
       </Card.Body>

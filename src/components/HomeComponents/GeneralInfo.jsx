@@ -23,7 +23,9 @@ export default function GeneralInfo() {
             className="mb-2"
           >
             <Card.Body>
-              <Card.Title>No chemical</Card.Title>
+              <Card.Title style={{ borderBottom: "2px solid #000000" }}>
+                No chemical
+              </Card.Title>
               <Card.Subtitle className="mb-2 text-muted">
                 Organic Coffee
               </Card.Subtitle>
@@ -36,9 +38,6 @@ export default function GeneralInfo() {
                 <Link to="/products">
                   <Button>See products</Button>
                 </Link>
-                <Link to="/ingredients">
-                  <Button>See ingredients</Button>
-                </Link>
               </div>
             </Card.Body>
           </Card>
@@ -50,7 +49,9 @@ export default function GeneralInfo() {
             className="mb-2"
           >
             <Card.Body>
-              <Card.Title>No Preservatives</Card.Title>
+              <Card.Title style={{ borderBottom: "2px solid #000000" }}>
+                No Preservatives
+              </Card.Title>
               <Card.Subtitle className="mb-2 text-muted">
                 Fresh products
               </Card.Subtitle>
@@ -63,9 +64,6 @@ export default function GeneralInfo() {
                 <Link to="/products">
                   <Button>See products</Button>
                 </Link>
-                <Link to="/ingredients">
-                  <Button>See ingredients</Button>
-                </Link>
               </div>
             </Card.Body>
           </Card>
@@ -77,7 +75,9 @@ export default function GeneralInfo() {
             className="mb-2"
           >
             <Card.Body>
-              <Card.Title>No Additives</Card.Title>
+              <Card.Title style={{ borderBottom: "2px solid #000000" }}>
+                No Additives
+              </Card.Title>
               <Card.Subtitle className="mb-2 text-muted">
                 No allergens
               </Card.Subtitle>
@@ -90,9 +90,6 @@ export default function GeneralInfo() {
                 <Link to="/products">
                   <Button>See products</Button>
                 </Link>
-                <Link to="/ingredients">
-                  <Button>See ingredients</Button>
-                </Link>
               </div>
             </Card.Body>
           </Card>
@@ -104,7 +101,9 @@ export default function GeneralInfo() {
             className="mb-2"
           >
             <Card.Body>
-              <Card.Title>Just Coffee</Card.Title>
+              <Card.Title style={{ borderBottom: "2px solid #000000" }}>
+                Just Coffee
+              </Card.Title>
               <Card.Subtitle className="mb-2 text-muted">
                 Real Coffee
               </Card.Subtitle>
@@ -116,9 +115,6 @@ export default function GeneralInfo() {
               <div className="d-flex justify-content-between">
                 <Link to="/products">
                   <Button>See products</Button>
-                </Link>
-                <Link to="/ingredients">
-                  <Button>See ingredients</Button>
                 </Link>
               </div>
             </Card.Body>

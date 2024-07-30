@@ -1,0 +1,47 @@
+p {
+  font-family: "Robotto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+}
+
+.carousel-item {
+  margin: 15px;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 0px;
+  background-color: #fff2e1;
+}
+
+.custom-dot-list-style li {
+  margin: 5px 5px;
+}
+
+.product-link {
+  text-decoration: none;
+}
+
+.product-container {
+  transition: transform 0.3s;
+}
+
+.product-container:hover {
+  transform: scale(1.2);
+}
+
+
+.col-component{
+  background-color: #FED8B1;
+  border: 2px solid #6F4E37;
+}

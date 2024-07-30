@@ -1,6 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
-import bgImg from "../../assests/bgImg.jpg";
 import { data } from "../../api/api";
+import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 export default function Story() {
   // This will be story/ about
   return (
@@ -10,8 +10,11 @@ export default function Story() {
           md={6}
           className="d-flex align-items-center justify-content-center flex-column"
         >
-          <h2>Our story</h2>
-          <p>
+          <h1>
+            <em>Our story</em>
+            <AutoStoriesIcon />{" "}
+          </h1>
+          <p className="mt-3">
             Our story began 10 years ago, when we decided to add a little extra
             flavor to every cup of coffee.{" "}
           </p>
