@@ -4,7 +4,13 @@ import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import StarIcon from "@mui/icons-material/Star";
 import { testimonials } from "../../api/testimonials";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 export default function Testimonials() {
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0.2,
+  });
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -23,6 +29,12 @@ export default function Testimonials() {
     },
   };
   return (
+    <motion.div
+    ref={ref}
+    initial={{ opacity: 0, x: 100 }} 
+    animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }}
+    transition={{ duration: 0.6 }}
+  >
     <Container
       className="my-4 py-4 d-flex align-items-center justify-content-center flex-column"
       style={{ backgroundColor: "#ECB176", borderRadius: "5px" }}
@@ -72,5 +84,6 @@ export default function Testimonials() {
         </Link>
       </Row>
     </Container>
+    </motion.div>
   );
 }

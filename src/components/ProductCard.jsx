@@ -7,6 +7,8 @@ import { useContext } from "react";
 import { FavoriteContext } from "../store/context";
 import { addToFavorites } from "../store/actions";
 import { useState } from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 export default function ProductCard(props) {
   const { name, image, description, id } = props;
   const { dispatch } = useContext(FavoriteContext);
@@ -21,35 +23,49 @@ export default function ProductCard(props) {
       setNotification(false);
     }, 2000);
   }
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0.1,
+  });
   return (
-    <Card style={{ width: "18rem", minHeight: "500px", overflow: "hidden" }}>
-      <Card.Img variant="top" src={image} />
-      <Card.Body>
-        <Card.Title>{name}</Card.Title>
-        <Card.Text>{description}</Card.Text>
-        <Link to={`/details/${id}`}>
-          <Button variant="primary">See details</Button>
-        </Link>
-        <Link className="mx-2" to="https://glovoapp.com" target="_blank">
-          <Button variant="dark">Order now</Button>
-        </Link>
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+      transition={{ duration: 0.6 }}
+    >
+      <Card style={{ width: "18rem", minHeight: "500px", overflow: "hidden" }}>
+        <Card.Img variant="top" src={image} />
+        <Card.Body>
+          <Card.Title>{name}</Card.Title>
+          <Card.Text>{description}</Card.Text>
+          <Link to={`/details/${id}`}>
+            <Button variant="primary">See details</Button>
+          </Link>
+          <Link className="mx-2" to="https://glovoapp.com" target="_blank">
+            <Button variant="dark">Order now</Button>
+          </Link>
 
-        <FavoriteIcon
-          style={{ color: isFavorited ? "red" : "inherit", cursor: "pointer" }}
-          onClick={() => {
-            handleAddToFavorite({
-              id: id,
-              image: image,
-              title: name,
-            });
-          }}
-        />
-        {showNotification && (
-          <div className="property-notification">
-            Product was added to favourite!
-          </div>
-        )}
-      </Card.Body>
-    </Card>
+          <FavoriteIcon
+            style={{
+              color: isFavorited ? "red" : "inherit",
+              cursor: "pointer",
+            }}
+            onClick={() => {
+              handleAddToFavorite({
+                id: id,
+                image: image,
+                title: name,
+              });
+            }}
+          />
+          {showNotification && (
+            <div className="property-notification">
+              Product was added to favourite!
+            </div>
+          )}
+        </Card.Body>
+      </Card>
+    </motion.div>
   );
 }
