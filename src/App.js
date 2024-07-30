@@ -12,6 +12,7 @@ import Favorites from "./pages/Favourite";
 import { useReducer } from "react";
 import { favoriteReducer, initialFavorite } from "./store/reducer";
 import { FavoriteContext } from "./store/context";
+import FAQ from "./components/FooterComponents.jsx/FAQ";
 
 function App() {
   const [state, dispatch] = useReducer(favoriteReducer, initialFavorite);
@@ -31,6 +32,7 @@ function App() {
             <Route path="/notfound" element={<NotFound />} />
             <Route path="/details/:id" element={<Details />} />
             <Route path="/favourites" element={<Favorites />} />
+            <Route path="/faq" element={<FAQ/>} />
           </Routes>
           <Footer />
         </div>
