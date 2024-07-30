@@ -3,13 +3,15 @@ import { data } from "../api/api";
 import ProductCard from "../components/ProductCard";
 import { useState } from "react";
 import NotFound from "./NotFoundPage";
+import Filter from "../components/Filter";
 export default function Products() {
   const [querry, setQuery] = useState("");
   const filteredData = data.filter((data) =>
     data.name.toLocaleLowerCase().includes(querry)
   );
   return (
-    <Container>
+    <Container style={{ backgroundColor: "#FED8B1" }} className="py-4">
+      <Filter />
       <Row>
         <Col className="my-4">
           <Form.Control

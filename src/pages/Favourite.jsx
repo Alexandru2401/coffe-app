@@ -13,7 +13,7 @@ export default function Favourites() {
     dispatch(actionResult);
   }
   return (
-    <Container>
+    <div style={{ backgroundColor: "#FED8B1" }}>
       <Row>
         <Col className="d-flex">
           <h2 className="my-4 mx-auto">
@@ -21,7 +21,10 @@ export default function Favourites() {
           </h2>
         </Col>
       </Row>
-      <Container className="d-flex align-items-center justify-content-center flex-wrap my-4">
+      <Container
+        className="d-flex align-items-center justify-content-center flex-wrap py-4"
+        style={{ backgroundColor: "#FED8B1" }}
+      >
         {state.products.length === 0 ? (
           <Row
             style={{ minHeight: "20vh" }}
@@ -63,6 +66,6 @@ export default function Favourites() {
           })
         )}
       </Container>
-    </Container>
+    </div>
   );
 }
