@@ -5,24 +5,31 @@ export default function Footer() {
   return (
     <footer
       className="d-flex justify-content-around py-3"
-      style={{ borderTop: "2px solid #6F4E37", backgroundColor:"#ECB176" }}
+      style={{ borderTop: "2px solid #6F4E37", backgroundColor: "#ECB176" }}
     >
       <Row>
         <h2>Contact Details:</h2>
         <ul>
           <li>123 Street, City, Country</li>
           <li>123-456-789</li>
-          <li>info@eCommerce.com</li>
+          <li>info@CoffeeShop.com</li>
         </ul>
       </Row>
       <Row>
-        <h2>Sponsors:</h2>
+        <h2>Comercial</h2>
         <ul>
-          <li>ShopOne</li>
-          <li>ZR Brand</li>
-          <li>No1 Jeans</li>
-          <li>ClothesWorld</li>
-          <li>Shop$Go</li>
+          <Link to="/contact">
+            <li>Contact Us</li>
+          </Link>
+          <Link to="#">
+            <li>FAQ</li>
+          </Link>
+          <Link to="#">
+            <li>Terms and conditions</li>
+          </Link>
+          <Link>
+            <li>Cookies</li>
+          </Link>
         </ul>
       </Row>
       <Row>
