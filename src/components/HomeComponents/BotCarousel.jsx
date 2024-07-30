@@ -1,7 +1,7 @@
 import Carousel from "react-bootstrap/Carousel";
-import bgImg from "../../assests/bgImg.jpg";
 import { data } from "../../api/api";
 function CarouselFadeExample() {
+  
   return (
     <Carousel fade style={{ maxHeight: "600px" }} className="mb-4">
       <Carousel.Item interval={3000} style={{ width: "600px" }}>
@@ -45,3 +45,4 @@ function CarouselFadeExample() {
 }
 
 export default CarouselFadeExample;
+

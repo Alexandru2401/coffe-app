@@ -2,16 +2,44 @@ import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { data } from "../api/api";
 import ProductCard from "../components/ProductCard";
 import { useState } from "react";
-import NotFound from "./NotFoundPage";
 import Filter from "../components/Filter";
+import NotFound from "./NotFoundPage";
 export default function Products() {
   const [querry, setQuery] = useState("");
+  const [filter, setFilter] = useState([]);
   const filteredData = data.filter((data) =>
     data.name.toLocaleLowerCase().includes(querry)
   );
+  // function filteredProdcuts(category) {
+  //   const newProd = data.filter((currentCat) => {
+  //     return currentCat.category === category;
+  //   });
+  //   setFilter(newProd);
+  // }
   return (
     <Container style={{ backgroundColor: "#FED8B1" }} className="py-4">
       <Filter />
+      <Col xs="12" lg="6">
+        <div className="d-flex flex-wrap">
+          <Button
+            variant="primary"
+            style={{ width: "150px" }}
+            className="mx-2 mb-2"
+            // onClick={() => filteredProdcuts("HOT BEVERAGES")}
+          >
+            Hot beverages
+          </Button>
+          <Button
+            variant="primary"
+            style={{ width: "150px" }}
+            className="mx-2 mb-2"
+            // onClick={() => filteredProdcuts("ICED BEVERAGES")}
+          >
+            Iced beverages
+          </Button>
+        </div>
+      </Col>
+
       <Row>
         <Col className="my-4">
           <Form.Control

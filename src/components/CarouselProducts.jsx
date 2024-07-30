@@ -63,7 +63,7 @@ export default function CarouselProducts() {
       </Row>
       <Row className="my-3">
         <Link to="/products">
-          <Button variant="danger">Order now!</Button>
+          <Button variant="dark">Order now!</Button>
         </Link>
       </Row>
     </Container>

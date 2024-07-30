@@ -34,7 +34,7 @@ export default function Filter({ name, ...props }) {
   return (
     <>
       <Button variant="primary" onClick={toggleShow} className="me-2">
-        {name}
+        {name} Add
       </Button>
       <Offcanvas
         show={show}
@@ -61,7 +61,7 @@ export default function Filter({ name, ...props }) {
               <Form.Check type="checkbox" label="+10 min" />
             </Form.Group>
           </Form>
-          <Button variant="danger">Remove fillters</Button>
+          <Button>Remove filters</Button>
         </Offcanvas.Body>
       </Offcanvas>
     </>
