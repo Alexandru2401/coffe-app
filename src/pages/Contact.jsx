@@ -3,32 +3,37 @@ import Form from "react-bootstrap/Form";
 import { InputGroup, Col, Container, Row } from "react-bootstrap";
 export default function Contact() {
   return (
-    <Container className="d-flex align-items-center flex-column justify-content-center my-3">
-      <Row>
-        <h2 className="my-3">Contact us</h2>
+    <Container className="my-3">
+      <Row className="justify-content-center">
+        <Col xs="auto">
+          <h2 className="my-3 text-center">Contact us</h2>
+        </Col>
       </Row>
-      <Row>
-        <Col className="col-component mx-2" >
+      <Row className="my-4 mx-1">
+        <Col xs={12} lg={6} className="col-component">
           <h3>Visits Us</h3>
           <p>You can Visits us at one of our shop </p>
         </Col>
-        <Col className="col-component">
+        <Col xs={12} lg={6} className="col-component">
           <h3>Phone</h3>
           <p>
             You can also call us from monday to friday between 10:00 - 18:00
           </p>
+          <p> +12 123 456 789</p>
         </Col>
       </Row>
       <Row>
-        <p className="mt-5 fw-bold">Or you can send an email:</p>
+        <p className="mt-5 fw-bold text-center">Or you can send an email:</p>
       </Row>
-      <Row className="col-component mb-3">
-        <Form className="d-flex flex-column justift-content-center align-items-center flex-wrap m-3">
+      <Row className=" justify-content-center mx-2">
+        <Form
+          className="w-100 my-3 p-4 col-component"
+          style={{ maxWidth: "600px" }}
+        >
           <Form.Group
             as={Col}
-            md="4"
+            className="mx-auto"
             controlId="validationCostomFname"
-            style={{ maxWidth: "500px", minWidth: "300px" }}
           >
             <Form.Label>Name</Form.Label>
             <Form.Control required type="text" placeholder="First name" />
@@ -38,9 +43,8 @@ export default function Contact() {
           </Form.Group>
           <Form.Group
             as={Col}
-            md="4"
+            className="mx-auto"
             controlId="validationCustomEmail"
-            style={{ maxWidth: "500px", minWidth: "300px" }}
           >
             <Form.Label>Email</Form.Label>
             <InputGroup hasValidation>
@@ -57,9 +61,8 @@ export default function Contact() {
           </Form.Group>
           <Form.Group
             as={Col}
-            md="6"
+            className="mx-auto"
             controlId="validationCustomTextarea"
-            style={{ maxWidth: "500px", minWidth: "300px" }}
           >
             <Form.Label>Message</Form.Label>
             <Form.Control

@@ -4,7 +4,7 @@ function CarouselFadeExample() {
   
   return (
     <Carousel fade style={{ maxHeight: "600px" }} className="mb-4">
-      <Carousel.Item interval={3000} style={{ width: "600px" }}>
+      <Carousel.Item interval={3000} style={{ maxWidth: "600px" }}>
         <img
           src={data[0].image}
           alt="First slide"
@@ -16,7 +16,7 @@ function CarouselFadeExample() {
           <p>Perfect for early mornings!</p>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item interval={3000} style={{ width: "600px" }}>
+      <Carousel.Item interval={3000} style={{ maxWidth: "600px" }}>
         <img
           src={data[10].image}
           alt="Second slide"
@@ -28,7 +28,7 @@ function CarouselFadeExample() {
           <p>Refresh yourself with the coldest drinks!</p>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item interval={3000} style={{ width: "600px" }}>
+      <Carousel.Item interval={3000} style={{ maxWidth: "600px" }}>
         <img
           src={data[22].image}
           alt="Third slide"

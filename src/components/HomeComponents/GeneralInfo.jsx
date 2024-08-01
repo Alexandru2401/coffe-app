@@ -6,8 +6,8 @@ import { useInView } from "react-intersection-observer";
 export default function GeneralInfo() {
   // This part will contain some info about products
   const { ref, inView } = useInView({
-    triggerOnce: false, 
-    threshold: 0.1, 
+    triggerOnce: false,
+    threshold: 0.1,
   });
 
   return (
@@ -27,7 +27,7 @@ export default function GeneralInfo() {
         </Row>
 
         <Row className="w-100 d-flex justify-content-center">
-          <Col xs={12} md={6} lg={3}>
+          <Col xs={12} md={6} lg={3} className="d-flex justify-content-center">
             <Card
               style={{ width: "19rem", backgroundColor: "#ECB176" }}
               className="mb-2"
@@ -53,7 +53,7 @@ export default function GeneralInfo() {
             </Card>
           </Col>
 
-          <Col xs={12} md={6} lg={3}>
+          <Col xs={12} md={6} lg={3} className="d-flex justify-content-center">
             <Card
               style={{ width: "19rem", backgroundColor: "#ECB176" }}
               className="mb-2"
@@ -79,7 +79,7 @@ export default function GeneralInfo() {
             </Card>
           </Col>
 
-          <Col xs={12} md={6} lg={3}>
+          <Col xs={12} md={6} lg={3} className="d-flex justify-content-center">
             <Card
               style={{ width: "19rem", backgroundColor: "#ECB176" }}
               className="mb-2"
@@ -105,7 +105,7 @@ export default function GeneralInfo() {
             </Card>
           </Col>
 
-          <Col xs={12} md={6} lg={3}>
+          <Col xs={12} md={6} lg={3} className="d-flex justify-content-center">
             <Card
               style={{ width: "19rem", backgroundColor: "#ECB176" }}
               className="mb-2"
