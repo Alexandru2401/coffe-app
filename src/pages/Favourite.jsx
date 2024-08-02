@@ -39,10 +39,7 @@ export default function Favourites() {
           style={{ backgroundColor: "#FED8B1" }}
         >
           {state.products.length === 0 ? (
-            <Row
-              style={{ minHeight: "20vh" }}
-              className="d-flex align-items-center"
-            >
+            <Row className="d-flex align-items-center flex-1">
               <p>You don't have any favorite products!</p>
             </Row>
           ) : (

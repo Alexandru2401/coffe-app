@@ -1,6 +1,6 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { data } from "../api/api";
+import { data } from "../../api/api";
 import { Button, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";

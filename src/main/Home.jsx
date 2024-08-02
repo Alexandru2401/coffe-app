@@ -1,11 +1,11 @@
-import CarouselProducts from "../components/CarouselProducts";
+import CarouselProducts from "../components/generalComponents/CarouselProducts";
 
-import BestProducts from "../components/HomeComponents/BestProducts";
-import GeneralInfo from "../components/HomeComponents/GeneralInfo";
-import ProductsVariety from "../components/HomeComponents/ProductsVariety";
-import Story from "../components/HomeComponents/Story";
-import Testimonials from "../components/HomeComponents/Testimonials";
-import ThirdHomeComponent from "../components/HomeComponents/ThirdHomeComponents";
+import BestProducts from "../components/homeComponents/BestProducts";
+import GeneralInfo from "../components/homeComponents/GeneralInfo";
+import ProductsVariety from "../components/homeComponents/ProductsVariety";
+import Story from "../components/homeComponents/Story";
+import Testimonials from "../components/homeComponents/Testimonials";
+import ThirdHomeComponent from "../components/homeComponents/ThirdHomeComponents";
 
 export default function Home() {
   return (

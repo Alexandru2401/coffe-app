@@ -1,9 +1,9 @@
 // Details.js
 import { Card, Container, Button } from "react-bootstrap";
 import { useParams } from "react-router-dom";
-import { data } from "../api/api";
+import { data } from "../../api/api";
 import Accordion from "react-bootstrap/Accordion";
-import NotFound from "../pages/NotFoundPage";
+import NotFound from "../../pages/NotFoundPage";
 import { Link } from "react-router-dom";
 function Details() {
   let { id } = useParams();

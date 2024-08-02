@@ -2,16 +2,17 @@ import React, { Suspense, lazy } from "react";
 import "./App.css";
 import Header from "./main/Header";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Home from "./main/Home";
+
 import Footer from "./main/Footer";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useReducer } from "react";
 import { favoriteReducer, initialFavorite } from "./store/reducer";
 import { FavoriteContext } from "./store/context";
-import FAQ from "./components/FooterComponents.jsx/FAQ";
+import FAQ from "./components/footerComponents/FAQ";
+const Home = lazy(() => import("./main/Home"))
 const Products = lazy(() => import("./pages/Products"));
 const Contact = lazy(() => import("./pages/Contact"));
-const Details = lazy(() => import("./components/Details"));
+const Details = lazy(() => import("./components/generalComponents/Details"));
 const NotFound = lazy(() => import("./pages/NotFoundPage"));
 const Favorites = lazy(() => import("./pages/Favourite"));
 function App() {

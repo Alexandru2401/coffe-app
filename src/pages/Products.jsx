@@ -1,8 +1,8 @@
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { data } from "../api/api";
-import ProductCard from "../components/ProductCard";
+import ProductCard from "../components/generalComponents/ProductCard";
 import { useState } from "react";
-import Filter from "../components/Filter";
+import Filter from "../components/generalComponents/Filter";
 import NotFound from "./NotFoundPage";
 
 
@@ -21,7 +21,13 @@ function Products() {
   // }
   return (
       <Container style={{ backgroundColor: "#FED8B1" }} className="py-4">
-        <Filter />
+        {/* <Filter /> */}
+        <Row className="justify-content-center">
+          <Col xs="auto">
+          <h2 className="my-4 text-center">See all the products!</h2>
+          </Col>
+        </Row>
+        <Row>
         <Col xs="12" lg="6">
           <div className="d-flex flex-wrap">
             <Button
@@ -42,7 +48,7 @@ function Products() {
             </Button>
           </div>
         </Col>
-
+      </Row>
         <Row>
           <Col className="my-4">
             <Form.Control
