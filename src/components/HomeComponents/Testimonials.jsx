@@ -57,13 +57,12 @@ export default function Testimonials() {
           containerClass="carousel-container"
           customTransition="all 1s ease-in-out"
           transitionDuration={1000}
-          removeArrowOnDeviceType={["tablet", "mobile"]}
           dotListClass="custom-dot-list-style"
           itemClass="carousel-item-padding-40-px"
           partialVisbile={false}
         >
           {testimonials.map((testimonials) => (
-            <Card key={testimonials.id} style={{ width: "20rem" }}>
+            <Card key={testimonials.id} style={{ width: "20rem" }} className="m-3">
               <Card.Img src={testimonials.imgSrc} />
               <Card.Body style={{ backgroundColor: "#102C57", color:"#ECB176"}}>
                 <Card.Text style={{ fontSize: "20px"}}>

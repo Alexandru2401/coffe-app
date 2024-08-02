@@ -1,6 +1,6 @@
 import { Container } from "react-bootstrap";
 
-export default function NotFound() {
+function NotFound() {
   return (
     <Container
       style={{ height: "30vh" }}
@@ -11,3 +11,4 @@ export default function NotFound() {
     </Container>
   );
 }
+export default NotFound;

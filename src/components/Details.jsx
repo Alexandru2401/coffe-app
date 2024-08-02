@@ -5,7 +5,7 @@ import { data } from "../api/api";
 import Accordion from "react-bootstrap/Accordion";
 import NotFound from "../pages/NotFoundPage";
 import { Link } from "react-router-dom";
-export default function Details() {
+function Details() {
   let { id } = useParams();
   const foundProduct = data.find((product) => product._id === id);
 
@@ -43,3 +43,5 @@ export default function Details() {
     </Container>
   );
 }
+
+export default Details;

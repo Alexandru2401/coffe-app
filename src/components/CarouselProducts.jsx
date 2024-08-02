@@ -56,14 +56,13 @@ export default function CarouselProducts() {
             containerClass="carousel-container"
             customTransition="all 1s ease-in-out"
             transitionDuration={1000}
-            removeArrowOnDeviceType={["tablet", "mobile"]}
             dotListClass="custom-dot-list-style"
             itemClass="carousel-item-padding-40-px"
             partialVisbile={false}
           >
             {data.slice(5, 25).map((data) => (
-              <Link to="/products" className="product-link">
-                <div key={data._id} className="product-container">
+              <Link key={data._id} to="/products" className="product-link">
+                <div className="product-container">
                   <h2 style={{ fontSize: "20px", color: "#6F4E37" }}>
                     {data.name}
                   </h2>

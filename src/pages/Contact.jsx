@@ -1,7 +1,14 @@
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { InputGroup, Col, Container, Row } from "react-bootstrap";
-export default function Contact() {
+import { useState } from "react";
+function Contact() {
+  const [showMessage, setMessage] = useState(false);
+  const handleSubmit = (e) => {
+    const form = e.currentTarget;
+    e.preventDefault();
+    setMessage(true);
+  };
   return (
     <Container className="my-3">
       <Row className="justify-content-center">
@@ -22,60 +29,77 @@ export default function Contact() {
           <p> +12 123 456 789</p>
         </Col>
       </Row>
-      <Row>
-        <p className="mt-5 fw-bold text-center">Or you can send an email:</p>
-      </Row>
-      <Row className=" justify-content-center mx-2">
-        <Form
-          className="w-100 my-3 p-4 col-component"
-          style={{ maxWidth: "600px" }}
-        >
-          <Form.Group
-            as={Col}
-            className="mx-auto"
-            controlId="validationCostomFname"
-          >
-            <Form.Label>Name</Form.Label>
-            <Form.Control required type="text" placeholder="First name" />
-            <Form.Control.Feedback type="invalid">
-              First name is empty
-            </Form.Control.Feedback>
-          </Form.Group>
-          <Form.Group
-            as={Col}
-            className="mx-auto"
-            controlId="validationCustomEmail"
-          >
-            <Form.Label>Email</Form.Label>
-            <InputGroup hasValidation>
-              <Form.Control
-                type="email"
-                placeholder="Ex: name@email.com"
-                aria-describedby="inputGroupPrepend"
-                required
-              />
-              <Form.Control.Feedback type="invalid">
-                Please provide a valid email
-              </Form.Control.Feedback>
-            </InputGroup>
-          </Form.Group>
-          <Form.Group
-            as={Col}
-            className="mx-auto"
-            controlId="validationCustomTextarea"
-          >
-            <Form.Label>Message</Form.Label>
-            <Form.Control
-              as="textarea"
-              rows={3}
-              placeholder="Your message here..."
-            />
-          </Form.Group>
-          <Button type="submit" className="my-3">
-            Submit
-          </Button>
-        </Form>
-      </Row>
+      {showMessage ? (
+        <Row>
+        <p className="my-5  fw-bold text-center">
+          {" "}
+          Thank you for contacting us! We will get back to you as soon as
+          possible!
+        </p>
+        </Row>
+      ) : (
+        <>
+          <Row>
+            <p className="mt-5 fw-bold text-center">
+              Or you can send an email:
+            </p>
+          </Row>
+          <Row className=" justify-content-center mx-2">
+            <Form
+              onSubmit={handleSubmit}
+              className="w-100 my-3 p-4 col-component"
+              style={{ maxWidth: "600px" }}
+            >
+              <Form.Group
+                as={Col}
+                className="mx-auto"
+                controlId="validationCostomFname"
+              >
+                <Form.Label>Name</Form.Label>
+                <Form.Control required type="text" placeholder="First name" />
+                <Form.Control.Feedback type="invalid">
+                  First name is empty
+                </Form.Control.Feedback>
+              </Form.Group>
+              <Form.Group
+                as={Col}
+                className="mx-auto"
+                controlId="validationCustomEmail"
+              >
+                <Form.Label>Email</Form.Label>
+                <InputGroup hasValidation>
+                  <Form.Control
+                    type="email"
+                    placeholder="Ex: name@email.com"
+                    aria-describedby="inputGroupPrepend"
+                    required
+                  />
+                  <Form.Control.Feedback type="invalid">
+                    Please provide a valid email
+                  </Form.Control.Feedback>
+                </InputGroup>
+              </Form.Group>
+              <Form.Group
+                as={Col}
+                className="mx-auto"
+                controlId="validationCustomTextarea"
+              >
+                <Form.Label>Message</Form.Label>
+                <Form.Control
+                  as="textarea"
+                  rows={3}
+                  placeholder="Your message here..."
+                />
+              </Form.Group>
+              <Button type="submit" className="my-3">
+                Submit
+              </Button>
+            </Form>
+          </Row>
+        </>
+      )}
     </Container>
   );
 }
+
+export default Contact

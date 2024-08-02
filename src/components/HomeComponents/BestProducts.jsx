@@ -31,7 +31,7 @@ export default function BestProducts() {
 
         <Row className="my-4">
           {data.slice(4, 8).map((data) => (
-            <Col>
+            <Col className="d-flex flex-column align-items-center" key={data._id}>
               {" "}
               <h4>{data.name}</h4>
               <img src={data.image} style={{ width: "300px" }} />

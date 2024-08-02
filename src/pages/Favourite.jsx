@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { FavoriteContext } from "../store/context";
 import { removeFromFavorites } from "../store/actions";
 import { Link, useParams } from "react-router-dom";
@@ -29,56 +29,56 @@ export default function Favourites() {
         </Col>
       </Row>
       <motion.div
-    ref={ref}
-    initial={{ opacity: 0, y: 50 }}
-    animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-    transition={{ duration: 0.6 }}
-  >
-      <Container
-        className="d-flex align-items-center justify-content-center flex-wrap py-4"
-        style={{ backgroundColor: "#FED8B1" }}
+        ref={ref}
+        initial={{ opacity: 0, y: 50 }}
+        animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+        transition={{ duration: 0.6 }}
       >
-        {state.products.length === 0 ? (
-          <Row
-            style={{ minHeight: "20vh" }}
-            className="d-flex align-items-center"
-          >
-            <p>You don't have any favorite products!</p>
-          </Row>
-        ) : (
-          state.products.map((product) => {
-            return (
-              <Card
-                key={product.id}
-                style={{
-                  width: "18rem",
-                }}
-                className="m-2"
-              >
-                <Card.Img variant="top" src={product.image} />
-                <Card.Body>
-                  <Card.Title>{product.title}</Card.Title>
-                  <Button
-                    onClick={() => {
-                      handlePropertyRemove(product.id);
-                    }}
-                    variant="danger"
-                  >
-                    Delete
-                  </Button>
-                  <Link
-                    className="mx-2"
-                    to="https://glovoapp.com"
-                    target="_blank"
-                  >
-                    <Button variant="dark">Order now!</Button>
-                  </Link>
-                </Card.Body>
-              </Card>
-            );
-          })
-        )}
-      </Container>
+        <Container
+          className="d-flex align-items-center justify-content-center flex-wrap py-4"
+          style={{ backgroundColor: "#FED8B1" }}
+        >
+          {state.products.length === 0 ? (
+            <Row
+              style={{ minHeight: "20vh" }}
+              className="d-flex align-items-center"
+            >
+              <p>You don't have any favorite products!</p>
+            </Row>
+          ) : (
+            state.products.map((product) => {
+              return (
+                <Card
+                  key={product.id}
+                  style={{
+                    width: "18rem",
+                  }}
+                  className="m-2"
+                >
+                  <Card.Img variant="top" src={product.image} />
+                  <Card.Body>
+                    <Card.Title>{product.title}</Card.Title>
+                    <Button
+                      onClick={() => {
+                        handlePropertyRemove(product.id);
+                      }}
+                      variant="danger"
+                    >
+                      Delete
+                    </Button>
+                    <Link
+                      className="mx-2"
+                      to="https://glovoapp.com"
+                      target="_blank"
+                    >
+                      <Button variant="dark">Order now!</Button>
+                    </Link>
+                  </Card.Body>
+                </Card>
+              );
+            })
+          )}
+        </Container>
       </motion.div>
     </div>
   );

@@ -5,7 +5,8 @@ import { useState } from "react";
 import Filter from "../components/Filter";
 import NotFound from "./NotFoundPage";
 
-export default function Products() {
+
+function Products() {
   const [querry, setQuery] = useState("");
   const [filter, setFilter] = useState([]);
   const filteredData = data.filter((data) =>
@@ -61,7 +62,7 @@ export default function Products() {
             </Col>
           ) : (
             filteredData.map((data) => (
-              <Col className="my-2" key={data._id}>
+              <Col className="my-2 d-flex align-items-center flex-column" key={data._id}>
                 <ProductCard
                   id={data._id}
                   name={data.name}
@@ -76,3 +77,5 @@ export default function Products() {
 
   );
 }
+
+export default Products;

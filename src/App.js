@@ -1,19 +1,19 @@
+import React, { Suspense, lazy } from "react";
 import "./App.css";
 import Header from "./main/Header";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./main/Home";
 import Footer from "./main/Footer";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Contact from "./pages/Contact";
-import Products from "./pages/Products";
-import Details from "./components/Details";
-import NotFound from "./pages/NotFoundPage";
-import Favorites from "./pages/Favourite";
 import { useReducer } from "react";
 import { favoriteReducer, initialFavorite } from "./store/reducer";
 import { FavoriteContext } from "./store/context";
 import FAQ from "./components/FooterComponents.jsx/FAQ";
-
+const Products = lazy(() => import("./pages/Products"));
+const Contact = lazy(() => import("./pages/Contact"));
+const Details = lazy(() => import("./components/Details"));
+const NotFound = lazy(() => import("./pages/NotFoundPage"));
+const Favorites = lazy(() => import("./pages/Favourite"));
 function App() {
   const [state, dispatch] = useReducer(favoriteReducer, initialFavorite);
   const favoriteContextValue = {
@@ -25,15 +25,17 @@ function App() {
       <Router>
         <div className="App">
           <Header />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/products" element={<Products />} />
-            <Route path="/notfound" element={<NotFound />} />
-            <Route path="/details/:id" element={<Details />} />
-            <Route path="/favourites" element={<Favorites />} />
-            <Route path="/faq" element={<FAQ/>} />
-          </Routes>
+          <Suspense fallback="Loading...">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/products" element={<Products />} />
+              <Route path="/notfound" element={<NotFound />} />
+              <Route path="/details/:id" element={<Details />} />
+              <Route path="/favourites" element={<Favorites />} />
+              <Route path="/faq" element={<FAQ />} />
+            </Routes>
+          </Suspense>
           <Footer />
         </div>
       </Router>
