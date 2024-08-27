@@ -1,4 +1,5 @@
-# Getting Started with Create React App
+# Coffee App
+You can see a live demo here "https://coffee-app-alex.netlify.app/"
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
