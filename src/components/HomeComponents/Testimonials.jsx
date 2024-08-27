@@ -63,7 +63,7 @@ export default function Testimonials() {
         >
           {testimonials.map((testimonials) => (
             <Card key={testimonials.id} style={{ width: "20rem" }} className="m-3">
-              <Card.Img src={testimonials.imgSrc} />
+              <Card.Img src={testimonials.imgSrc} alt="img"/>
               <Card.Body style={{ backgroundColor: "#102C57", color:"#ECB176"}}>
                 <Card.Text style={{ fontSize: "20px"}}>
                   {testimonials.description}

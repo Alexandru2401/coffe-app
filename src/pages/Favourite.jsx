@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { FavoriteContext } from "../store/context";
 import { removeFromFavorites } from "../store/actions";
 import { Link, useParams } from "react-router-dom";

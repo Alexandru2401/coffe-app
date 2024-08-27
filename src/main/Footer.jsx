@@ -1,4 +1,4 @@
-import { Container, Col, Row } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 export default function Footer() {

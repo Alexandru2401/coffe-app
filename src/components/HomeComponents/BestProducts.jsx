@@ -34,7 +34,7 @@ export default function BestProducts() {
             <Col className="d-flex flex-column align-items-center" key={data._id}>
               {" "}
               <h4>{data.name}</h4>
-              <img src={data.image} style={{ width: "300px" }} />
+              <img src={data.image} style={{ width: "300px" }} alt="img"/>
             </Col>
           ))}
         </Row>
