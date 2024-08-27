@@ -9,7 +9,7 @@ function Products() {
   const [filter, setFilter] = useState("");
   const filteredData = data.filter((data) => {
     const searchProducts = data.name.toLocaleLowerCase().includes(querry);
-    const filteredProducts = filter ? data.category === filter : null;
+    const filteredProducts = filter ? data.category === filter : true;
     return searchProducts && filteredProducts;
   });
 
