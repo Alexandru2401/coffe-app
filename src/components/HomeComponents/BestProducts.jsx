@@ -53,30 +53,36 @@ export default function BestProducts() {
         </Row>
 
         <Row
-          className="my-4"
+          className="my-4 py-4"
           style={{
             backgroundColor: "red",
-            height: "200px",
+            height: "300px",
             overflow: "hidden",
           }}
         >
+          <Col className="d-flex flex-column align-items-center justify-content-center">
+            <Button onClick={handlePrev}>
+              <ArrowBackIosIcon />
+            </Button>
+          </Col>
           {displayProducts.map((data) => (
             <Col
               className="d-flex flex-column align-items-center"
               key={data._id}
             >
               {" "}
-              <h4>{data.name}</h4>
-              <img src={data.image} style={{ width: "300px" }} alt="img" />
+              <h4 className="fs-5">{data.name}</h4>
+              <img src={data.image} style={{ width: "400px" }} alt="img" />
             </Col>
           ))}
+          <Col className="d-flex flex-column align-items-center justify-content-center">
+            {" "}
+            <Button onClick={handleNext}>
+              <ArrowForwardIosIcon />
+            </Button>
+          </Col>
         </Row>
-        <Button onClick={handlePrev}>
-          <ArrowBackIosIcon />
-        </Button>
-        <Button onClick={handleNext}>
-          <ArrowForwardIosIcon />
-        </Button>
+
         <Row>
           <Col className="d-flex align-items-center justify-content-center">
             <Link to="/products">
