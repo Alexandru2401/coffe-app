@@ -30,6 +30,9 @@ export default function NavbarComponent() {
                 Favourites
               </NavDropdown.Item>
             </NavDropdown>
+            <Nav.Link as={Link} to="/paypage" className="fw-bold fs-5">
+              Cart
+            </Nav.Link>
             <Nav.Link as={Link} to="https://glovoapp.com" target="_blank" className="fw-bold fs-5">
               Order now!
             </Nav.Link>

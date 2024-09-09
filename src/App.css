@@ -44,3 +44,7 @@ h6 {
   background-color: #fed8b1;
   border: 2px solid #6f4e37;
 }
+
+.box-shadow-effect {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}

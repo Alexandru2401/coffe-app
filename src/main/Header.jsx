@@ -17,6 +17,7 @@ export default function Header() {
       <Container className="d-flex align-items-center justify-content-center h-100">
         {location.pathname !== "/products" && (
           <Card
+            className="box-shadow-effect"
             style={{
               width: "22rem",
               height: "12rem",

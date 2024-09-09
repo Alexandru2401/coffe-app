@@ -1,11 +1,12 @@
 import React, { useContext } from "react";
-import { FavoriteContext } from "../store/context";
-import { removeFromFavorites } from "../store/actions";
+import { FavoriteContext } from "../store/favoriteStore/context";
+import { removeFromFavorites } from "../store/favoriteStore/actions";
 import { Link, useParams } from "react-router-dom";
 import { Button, Container, Card, Row, Col } from "react-bootstrap";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+
 export default function Favourites() {
   const { id } = useParams();
   const { state, dispatch } = useContext(FavoriteContext);

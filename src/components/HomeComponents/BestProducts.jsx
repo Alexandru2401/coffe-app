@@ -54,9 +54,10 @@ export default function BestProducts() {
         </Row>
 
         <Row
-          className="my-4 py-4 mx-auto"
+          className="my-4 py-4 mx-auto box-shadow-effect"
           style={{
-            backgroundColor: "red",
+            backgroundColor: "#ECB176",
+            borderRadius: "10px",
             height: "300px",
             overflow: "hidden",
             width: "70%"
