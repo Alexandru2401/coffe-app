@@ -6,6 +6,8 @@ import NorthEastIcon from "@mui/icons-material/NorthEast";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useState } from "react";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 export default function BestProducts() {
   // This section will render the most admired products
   const [index, setIndex] = useState(0);
@@ -69,8 +71,12 @@ export default function BestProducts() {
             </Col>
           ))}
         </Row>
-        <Button onClick={handlePrev}>Prev</Button>
-        <Button onClick={handleNext}>Next</Button>
+        <Button onClick={handlePrev}>
+          <ArrowBackIosIcon />
+        </Button>
+        <Button onClick={handleNext}>
+          <ArrowForwardIosIcon />
+        </Button>
         <Row>
           <Col className="d-flex align-items-center justify-content-center">
             <Link to="/products">
