@@ -1,5 +1,4 @@
 import { Container, Card, Button, Row, Col } from "react-bootstrap";
-import CarouselFadeExample from "./BotCarousel";
 import { Link } from "react-router-dom";
 import LocalFireDepartmentIcon from "@mui/icons-material/LocalFireDepartment";
 import AcUnitIcon from "@mui/icons-material/AcUnit";
@@ -31,9 +30,9 @@ export default function ProductsVariety() {
         <Container className="my-5">
           <Row>
             <Col md={6} className="d-flex align-items-center">
-              <div style={{ maxWidth: "600px" }}>
+              {/* <div style={{ maxWidth: "600px" }}>
                 <CarouselFadeExample />
-              </div>
+              </div> */}
             </Col>
             <Col md={6} style={{ maxWidth: "600px" }}>
               <Card

@@ -4,7 +4,7 @@ import ProductCard from "../components/generalComponents/ProductCard";
 import { useState } from "react";
 import NotFound from "./NotFoundPage";
 
-function Products() {
+export default function Products() {
   const [querry, setQuery] = useState("");
   const [filter, setFilter] = useState("");
   const filteredData = data.filter((data) => {
@@ -18,7 +18,6 @@ function Products() {
   }
   return (
     <Container style={{ backgroundColor: "#FED8B1" }} className="py-4">
-      {/* <Filter /> */}
       <Row className="justify-content-center">
         <Col xs="auto">
           <h2 className="my-4 text-center">See all the products!</h2>
@@ -83,4 +82,3 @@ function Products() {
   );
 }
 
-export default Products;
