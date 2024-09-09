@@ -17,10 +17,10 @@ export default function BestProducts() {
   });
 
   let bestProducts = data.slice(2, 10);
-  let displayProducts = bestProducts.slice(index, index + 2);
+  let displayProducts = bestProducts.slice(index, index + 1);
 
   function handleNext() {
-    if (index > displayProducts.length) {
+    if (index >= bestProducts.length - 1) {
       setIndex(0);
     } else {
       setIndex(index + 1);
@@ -35,6 +35,7 @@ export default function BestProducts() {
     }
   }
 
+  const basicsStyle = `d-flex flex-column align-items-center`;
   return (
     <motion.div
       ref={ref}
@@ -53,29 +54,34 @@ export default function BestProducts() {
         </Row>
 
         <Row
-          className="my-4 py-4"
+          className="my-4 py-4 mx-auto"
           style={{
             backgroundColor: "red",
             height: "300px",
             overflow: "hidden",
+            width: "70%"
           }}
         >
-          <Col className="d-flex flex-column align-items-center justify-content-center">
+          <Col className={`${basicsStyle} justify-content-center`}>
             <Button onClick={handlePrev}>
               <ArrowBackIosIcon />
             </Button>
           </Col>
           {displayProducts.map((data) => (
-            <Col
-              className="d-flex flex-column align-items-center"
-              key={data._id}
-            >
+            <Col className={basicsStyle} key={data._id}>
               {" "}
-              <h4 className="fs-5">{data.name}</h4>
-              <img src={data.image} style={{ width: "400px" }} alt="img" />
+              <motion.div
+                initial={{ opacity: 0, x: 300 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.75, ease: "easeIn" }}
+                exit={{ x: -300, opacity: 0 }}
+              >
+                <h4 className="fs-5">{data.name}</h4>
+                <img src={data.image} style={{ maxWidth: "400px" }} alt="img" />
+              </motion.div>
             </Col>
           ))}
-          <Col className="d-flex flex-column align-items-center justify-content-center">
+          <Col className={`${basicsStyle} justify-content-center`}>
             {" "}
             <Button onClick={handleNext}>
               <ArrowForwardIosIcon />
