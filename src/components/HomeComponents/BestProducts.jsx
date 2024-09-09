@@ -14,16 +14,24 @@ export default function BestProducts() {
     threshold: 0.1,
   });
 
+  let bestProducts = data.slice(2, 10);
+  let displayProducts = bestProducts.slice(index, index + 2);
+
   function handleNext() {
-    setIndex(index + 1);
+    if (index > displayProducts.length) {
+      setIndex(0);
+    } else {
+      setIndex(index + 1);
+    }
   }
 
   function handlePrev() {
-    setIndex(index - 1);
+    if (index === 0) {
+      setIndex(bestProducts.length - 2);
+    } else {
+      setIndex(index - 1);
+    }
   }
-
-  let bestProducts = data.slice(2, 10);
-  let displayProducts = bestProducts.slice(index, index+2);
 
   return (
     <motion.div
