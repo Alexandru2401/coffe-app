@@ -4,11 +4,15 @@ import { InputGroup, Col, Container, Row } from "react-bootstrap";
 import { useState } from "react";
 function Contact() {
   const [showMessage, setMessage] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [textMessage, setTextMessage] = useState("");
+
   const handleSubmit = (e) => {
-    const form = e.currentTarget;
     e.preventDefault();
     setMessage(true);
   };
+  
   return (
     <Container className="my-3">
       <Row className="justify-content-center">
@@ -31,11 +35,11 @@ function Contact() {
       </Row>
       {showMessage ? (
         <Row>
-        <p className="my-5  fw-bold text-center">
-          {" "}
-          Thank you for contacting us! We will get back to you as soon as
-          possible!
-        </p>
+          <p className="my-5  fw-bold text-center">
+            {" "}
+            Thank you for contacting us! We will get back to you as soon as
+            possible!
+          </p>
         </Row>
       ) : (
         <>
@@ -102,4 +106,4 @@ function Contact() {
   );
 }
 
-export default Contact
+export default Contact;
