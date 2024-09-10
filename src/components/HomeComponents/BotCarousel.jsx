@@ -1,7 +1,7 @@
 import Carousel from "react-bootstrap/Carousel";
 import { data } from "../../api/api";
-function CarouselFadeExample() {
-  
+
+export default function CustomCarousel() {
   return (
     <Carousel fade style={{ maxHeight: "600px" }} className="mb-4">
       <Carousel.Item interval={3000} style={{ maxWidth: "600px" }}>
@@ -43,6 +43,4 @@ function CarouselFadeExample() {
     </Carousel>
   );
 }
-
-export default CarouselFadeExample;
 

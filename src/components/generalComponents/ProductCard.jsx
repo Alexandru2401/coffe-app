@@ -8,8 +8,8 @@ import { addToFavorites } from "../../store/favoriteStore/actions";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-export default function ProductCard(props) {
-  const { name, image, description, id } = props;
+
+export default function ProductCard({ name, image, description, id }) {
   const { dispatch } = useContext(FavoriteContext);
   const [showNotification, setNotification] = useState(false);
   const [isFavorited, setFavorited] = useState(false);
@@ -22,6 +22,9 @@ export default function ProductCard(props) {
       setNotification(false);
     }, 2000);
   }
+
+  // const { dispacthCart } = useContext(CartContext);
+  function handleAddToCart() {}
   const { ref, inView } = useInView({
     triggerOnce: false,
     threshold: 0.1,
@@ -63,6 +66,7 @@ export default function ProductCard(props) {
               Product was added to favourite!
             </div>
           )}
+          <Button onClick={handleAddToCart}>Add to cart</Button>
         </Card.Body>
       </Card>
     </motion.div>

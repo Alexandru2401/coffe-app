@@ -38,6 +38,9 @@ function Details() {
           <Link to="https://glovoapp.com" target="_blank">
             <Button variant="dark">Order now</Button>
           </Link>
+          <Link to="https://glovoapp.com" target="_blank">
+            <Button variant="dark">Add to cart</Button>
+          </Link>
         </Card.Body>
       </Card>
     </Container>

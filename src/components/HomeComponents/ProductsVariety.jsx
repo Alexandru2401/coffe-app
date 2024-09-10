@@ -5,16 +5,16 @@ import AcUnitIcon from "@mui/icons-material/AcUnit";
 import CoffeeIcon from "@mui/icons-material/Coffee";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-
+import CustomCarousel from "./BotCarousel";
 export default function ProductsVariety() {
   const { ref, inView } = useInView({
-    triggerOnce: false, 
-    threshold: 0.1, 
+    triggerOnce: false,
+    threshold: 0.1,
   });
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, x: -100 }} 
+      initial={{ opacity: 0, x: -100 }}
       animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
       transition={{ duration: 0.6 }}
     >
@@ -30,9 +30,9 @@ export default function ProductsVariety() {
         <Container className="my-5">
           <Row>
             <Col md={6} className="d-flex align-items-center">
-              {/* <div style={{ maxWidth: "600px" }}>
-                <CarouselFadeExample />
-              </div> */}
+              <div style={{ maxWidth: "600px" }}>
+                <CustomCarousel />
+              </div>
             </Col>
             <Col md={6} style={{ maxWidth: "600px" }}>
               <Card
