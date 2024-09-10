@@ -7,12 +7,26 @@ function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [textMessage, setTextMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setMessage(true);
+  const [validated, setValidated] = useState(false);
+
+  const handleSubmit = (event) => {
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+
+    setValidated(true);
   };
-  
+
+  function formValidation() {
+    if (name === "") {
+      setErrorMessage(true);
+    }
+  }
+
   return (
     <Container className="my-3">
       <Row className="justify-content-center">
@@ -50,6 +64,8 @@ function Contact() {
           </Row>
           <Row className=" justify-content-center mx-2">
             <Form
+              noValidate
+              validated={validated}
               onSubmit={handleSubmit}
               className="w-100 my-3 p-4 col-component"
               style={{ maxWidth: "600px" }}
@@ -60,7 +76,13 @@ function Contact() {
                 controlId="validationCostomFname"
               >
                 <Form.Label>Name</Form.Label>
-                <Form.Control required type="text" placeholder="First name" />
+                <Form.Control
+                  required
+                  type="text"
+                  placeholder="First name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                />{" "}
                 <Form.Control.Feedback type="invalid">
                   First name is empty
                 </Form.Control.Feedback>
@@ -77,6 +99,8 @@ function Contact() {
                     placeholder="Ex: name@email.com"
                     aria-describedby="inputGroupPrepend"
                     required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                   <Form.Control.Feedback type="invalid">
                     Please provide a valid email
@@ -93,6 +117,8 @@ function Contact() {
                   as="textarea"
                   rows={3}
                   placeholder="Your message here..."
+                  value={textMessage}
+                  onChange={(e) => setTextMessage(e.target.value)}
                 />
               </Form.Group>
               <Button type="submit" className="my-3">
