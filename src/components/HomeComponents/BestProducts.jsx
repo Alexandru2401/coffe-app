@@ -12,7 +12,7 @@ export default function BestProducts() {
   // This section will render the most admired products
   const [index, setIndex] = useState(0);
   const { ref, inView } = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
     threshold: 0.1,
   });
 
