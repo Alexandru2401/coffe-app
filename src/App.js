@@ -11,7 +11,6 @@ import {
 } from "./store/favoriteStore/reducer";
 import { FavoriteContext } from "./store/favoriteStore/context";
 import FAQ from "./components/footerComponents/FAQ";
-import PayPage from "./pages/PayPage";
 
 const Home = lazy(() => import("./main/Home"));
 const Products = lazy(() => import("./pages/Products"));
@@ -38,7 +37,6 @@ function App() {
               <Route path="/notfound" element={<NotFound />} />
               <Route path="/details/:id" element={<Details />} />
               <Route path="/favourites" element={<Favorites />} />
-              <Route path="/paypage" element={<PayPage />} />
               <Route path="/faq" element={<FAQ />} />
             </Routes>
           </Suspense>

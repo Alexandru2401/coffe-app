@@ -22,18 +22,33 @@ export default function NavbarComponent() {
             <Nav.Link as={Link} to="/contact" className="fw-bold fs-5">
               Contact
             </Nav.Link>
-            <NavDropdown title="Pages" id="navbarScrollingDropdown" className="fw-bold fs-5">
-              <NavDropdown.Item as={Link} to="/products" className="fw-bold fs-5">
+            <NavDropdown
+              title="Pages"
+              id="navbarScrollingDropdown"
+              className="fw-bold fs-5"
+            >
+              <NavDropdown.Item
+                as={Link}
+                to="/products"
+                className="fw-bold fs-5"
+              >
                 Products
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/favourites" className="fw-bold fs-5">
+              <NavDropdown.Item
+                as={Link}
+                to="/favourites"
+                className="fw-bold fs-5"
+              >
                 Favourites
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link as={Link} to="/paypage" className="fw-bold fs-5">
-              Cart
-            </Nav.Link>
-            <Nav.Link as={Link} to="https://glovoapp.com" target="_blank" className="fw-bold fs-5">
+
+            <Nav.Link
+              as={Link}
+              to="https://glovoapp.com"
+              target="_blank"
+              className="fw-bold fs-5"
+            >
               Order now!
             </Nav.Link>
           </Nav>

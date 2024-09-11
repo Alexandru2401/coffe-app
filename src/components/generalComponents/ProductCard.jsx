@@ -66,7 +66,6 @@ export default function ProductCard({ name, image, description, id }) {
               Product was added to favourite!
             </div>
           )}
-          <Button onClick={handleAddToCart}>Add to cart</Button>
         </Card.Body>
       </Card>
     </motion.div>
