@@ -7,7 +7,6 @@ function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [textMessage, setTextMessage] = useState("");
-  const [errorMessage, setErrorMessage] = useState(false);
 
   const [validated, setValidated] = useState(false);
 
@@ -16,16 +15,12 @@ function Contact() {
     if (form.checkValidity() === false) {
       event.preventDefault();
       event.stopPropagation();
+    } else {
+      setMessage(true);
     }
-
     setValidated(true);
-  };
 
-  function formValidation() {
-    if (name === "") {
-      setErrorMessage(true);
-    }
-  }
+  };
 
   return (
     <Container className="my-3">
@@ -118,8 +113,12 @@ function Contact() {
                   rows={3}
                   placeholder="Your message here..."
                   value={textMessage}
+                  required
                   onChange={(e) => setTextMessage(e.target.value)}
                 />
+                <Form.Control.Feedback type="invalid">
+                  Please enter a message!
+                </Form.Control.Feedback>
               </Form.Group>
               <Button type="submit" className="my-3">
                 Submit
