@@ -16,11 +16,15 @@ export default function Testimonials() {
   });
 
   function handleNext() {
-    setIndex((prevIndex) => (prevIndex >= testimonials.length - 1 ? 0 : prevIndex + 1));
+    setIndex((prevIndex) =>
+      prevIndex >= testimonials.length - 1 ? 0 : prevIndex + 1
+    );
   }
 
   function handlePrev() {
-    setIndex((prevIndex) => (prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1));
+    setIndex((prevIndex) =>
+      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
+    );
   }
 
   return (
@@ -39,43 +43,72 @@ export default function Testimonials() {
         </Row>
 
         <Row
-          className="mb-4 w-100 my-3 d-flex align-items-center justify-content-around"
-          style={{
-            height: "350px",
-            width: "70%",
-            overflow: "hidden",
-            border: "1px solid black",
-            borderRadius: "5px",
-            backgroundColor: "#FFF2E1",
-          }}
+          className="d-flex align-items-center mx-auto"
+          //  className="mb-4 w-100 my-3 d-flex align-items-center justify-content-around"
+          //  style={{
+          //    height: "350px",
+          //    width: "70%",
+          //    overflow: "hidden",
+          //    border: "1px solid black",
+          //    borderRadius: "5px",
+          //    backgroundColor: "#FFF2E1",
+          //  }}
         >
-          <Col className="justify-content-center">
-            <Button onClick={handlePrev}>
-              <ArrowBackIosIcon />
-            </Button>
-          </Col>
+          <Col className="d-flex align-items-center">
+            <Col className="justify-content-center" lg={1}>
+              <Button onClick={handlePrev}>
+                <ArrowBackIosIcon />
+              </Button>
+            </Col>
 
-          <Col key={testimonials[index].id}>
-            <Card style={{ width: "20rem" }} className="m-3">
-              <Card.Img src={testimonials[index].imgSrc} alt="img" />
-              <Card.Body
-                style={{ backgroundColor: "#102C57", color: "#ECB176" }}
+            <Col key={testimonials[index].id}>
+              <Card
+                style={{ width: "20rem", minHeight: "400px" }}
+                className="m-3"
               >
-                <Card.Text style={{ fontSize: "20px" }}>
-                  {testimonials[index].description}
-                </Card.Text>
-                <Card.Text>
-                  {testimonials[index].rating}
-                  <StarIcon />
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
+                <Card.Img src={testimonials[index].imgSrc} alt="img" />
+                <Card.Body
+                  style={{ backgroundColor: "#102C57", color: "#ECB176" }}
+                >
+                  <Card.Text style={{ fontSize: "20px" }}>
+                    {testimonials[index].description}
+                  </Card.Text>
+                  <Card.Text>
+                    {testimonials[index].rating}
+                    <StarIcon />
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
 
-          <Col className="justify-content-center">
-            <Button onClick={handleNext}>
-              <ArrowForwardIosIcon />
-            </Button>
+            <Col className="justify-content-center">
+              <Button onClick={handleNext}>
+                <ArrowForwardIosIcon />
+              </Button>
+            </Col>
+          </Col>
+          <Col>
+            <h2>100% coffee!</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+              sequi excepturi laborum, magni reiciendis fugit facere et nihil
+              dolores aut maiores hic ratione iste officiis at recusandae
+              doloremque cumque minima?
+            </p>
+            <h2>Coffee as Experience!</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+              sequi excepturi laborum, magni reiciendis fugit facere et nihil
+              dolores aut maiores hic ratione iste officiis at recusandae
+              doloremque cumque minima?
+            </p>
+            <h2> Mindful Moments with Coffee!</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+              sequi excepturi laborum, magni reiciendis fugit facere et nihil
+              dolores aut maiores hic ratione iste officiis at recusandae
+              doloremque cumque minima?
+            </p>
           </Col>
         </Row>
 
