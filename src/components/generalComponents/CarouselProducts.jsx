@@ -54,6 +54,7 @@ export default function CarouselProducts() {
             overflow: "hidden",
             border: "1px solid black",
             borderRadius: "5px",
+            backgroundColor:"#FFF2E1"
           }}
         >
           {" "}

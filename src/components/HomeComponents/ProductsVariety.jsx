@@ -8,7 +8,7 @@ import { useInView } from "react-intersection-observer";
 import CustomCarousel from "./BotCarousel";
 export default function ProductsVariety() {
   const { ref, inView } = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
     threshold: 0.1,
   });
   return (
