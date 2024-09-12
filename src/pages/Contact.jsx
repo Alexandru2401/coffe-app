@@ -19,7 +19,6 @@ function Contact() {
       setMessage(true);
     }
     setValidated(true);
-
   };
 
   return (

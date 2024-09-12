@@ -42,18 +42,7 @@ export default function Testimonials() {
           <h2>Our coffee is the best! We don't say that, our customers do!</h2>
         </Row>
 
-        <Row
-          className="d-flex align-items-center mx-auto"
-          //  className="mb-4 w-100 my-3 d-flex align-items-center justify-content-around"
-          //  style={{
-          //    height: "350px",
-          //    width: "70%",
-          //    overflow: "hidden",
-          //    border: "1px solid black",
-          //    borderRadius: "5px",
-          //    backgroundColor: "#FFF2E1",
-          //  }}
-        >
+        <Row className="d-flex align-items-center mx-auto">
           <Col className="d-flex align-items-center">
             <Col className="justify-content-center" lg={1}>
               <Button onClick={handlePrev}>
@@ -62,13 +51,14 @@ export default function Testimonials() {
             </Col>
 
             <Col key={testimonials[index].id}>
-              <Card
-                style={{ width: "20rem", minHeight: "400px" }}
-                className="m-3"
-              >
+              <Card style={{ width: "20rem" }} className="m-3">
                 <Card.Img src={testimonials[index].imgSrc} alt="img" />
                 <Card.Body
-                  style={{ backgroundColor: "#102C57", color: "#ECB176" }}
+                  style={{
+                    backgroundColor: "#102C57",
+                    color: "#ECB176",
+                    minHeight: "320px",
+                  }}
                 >
                   <Card.Text style={{ fontSize: "20px" }}>
                     {testimonials[index].description}
@@ -87,7 +77,14 @@ export default function Testimonials() {
               </Button>
             </Col>
           </Col>
-          <Col className="box-shadow-effect mx-2" style={{backgroundColor:"#FED8B1", border: "1px solid black", borderRadius: "5px"}}>
+          <Col
+            className="box-shadow-effect mx-2"
+            style={{
+              backgroundColor: "#FED8B1",
+              border: "1px solid black",
+              borderRadius: "5px",
+            }}
+          >
             <h2>100% coffee!</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
