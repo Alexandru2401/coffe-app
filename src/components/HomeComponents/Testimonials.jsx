@@ -87,7 +87,7 @@ export default function Testimonials() {
               </Button>
             </Col>
           </Col>
-          <Col>
+          <Col className="box-shadow-effect mx-2" style={{backgroundColor:"#FED8B1", border: "1px solid black", borderRadius: "5px"}}>
             <h2>100% coffee!</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
